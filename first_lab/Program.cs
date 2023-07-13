@@ -2,49 +2,154 @@
 
 class Program
 {
+
+    
+
     static void Main(string[] args)
     {
-        Console.WriteLine("Input bool variable");
-        bool BoolVariable = Convert.ToBoolean(Console.ReadLine());
 
-        Console.WriteLine("Input byte variable");
-        byte ByteVariable = Convert.ToByte(Console.ReadLine());
+       
+        Variables variables = new Variables();
+        Strings strings = new Strings();
+        Arrays arrays = new Arrays();
+        Tuples tuples = new Tuples();
 
-        Console.WriteLine("Input sbyte variable");
-        sbyte SByteVariable = Convert.ToSByte(Console.ReadLine());
+        Console.WriteLine("Input task:");
+        string masterChoice =  Console.ReadLine();
 
-        Console.WriteLine("Input char variable");
-        char CharVariable = Convert.ToChar(Console.ReadLine());
+        switch (masterChoice) {
+            case "1":
 
-        Console.WriteLine("Input float variable");
-        float FloatVariable = Convert.ToSingle(Console.ReadLine());
+                Console.WriteLine("Input subtask:");
 
-        Console.WriteLine("Input double variable");
-        double DoubleVarible = Convert.ToDouble(Console.ReadLine());
+                string slaveChoiceVariables = Console.ReadLine();
 
-        Console.WriteLine("Input decimal variable");
-        decimal DecimalVariable = Convert.ToDecimal(Console.ReadLine());
+                switch (slaveChoiceVariables)
+                {
+                    case "a":
+                        variables.pointA();
+                        break;
 
-        Console.WriteLine("Input int variable");
-        int IntVariable  = Convert.ToInt32(Console.ReadLine());
+                    case "b":
+                        variables.pointB();
 
-        Console.WriteLine("Input uint variable");
-        uint UintVariable = Convert.ToUInt32(Console.ReadLine());
+                        break;
+
+                    case "c":
+                        variables.pointC();
+
+                        break;
+
+                    case "d":
+                        variables.pointD();
+
+                        break;
+
+                    case "e":
+                        variables.pointE();
+
+                        break;
+
+                }
 
 
-        Console.WriteLine("variables:");
-        Console.WriteLine(" bool variable: {0}", BoolVariable);
-        Console.WriteLine(" byte variable: {0}", ByteVariable);
-        Console.WriteLine(" sbyte variable: {0}", SByteVariable);
-        Console.WriteLine(" char variable: {0}", CharVariable);
-        Console.WriteLine(" double variable: {0}", DoubleVarible);
-        Console.WriteLine(" decimal variable: {0}", DecimalVariable);
-        Console.WriteLine(" int variable: {0}", IntVariable);
-        Console.WriteLine(" uint variable: {0}", UintVariable);
+
+                break;
+
+            case "2":
+
+                string slaveChoiceStrings = Console.ReadLine();
+
+                switch (slaveChoiceStrings)
+                {
+                    case "a":
+                        strings.pointA();
+                        break;
+
+                    case "b":
+                        strings.pointB();
+                        break;
+
+                    case "c":
+                        strings.pointC();
+                        break;
+
+                    case "d":
+                        strings.pointD();
+                        break;
+
+
+                }
+
+                break;
+
+
+            case "3":
+
+
+                string slaveChoiceArrays = Console.ReadLine();
+
+                switch (slaveChoiceArrays)
+                {
+                    case "a":
+                        arrays.pointA();
+                        break;
+
+                    case "b":
+                        arrays.pointB();
+                        break;
+
+                    case "c":
+                        arrays.pointC();
+                        break;
+
+                    case "d":
+                        arrays.pointD();
+                        break;
+
+
+                }
+
+                break;
+
+            case "4":
+
+                string slaveChoiceTuples = Console.ReadLine();
+
+                switch (slaveChoiceTuples)
+                {
+                    case "a":
+                        tuples.pointA();
+                        break;
+
+                    case "b":
+                        tuples.pointB();
+                        break;
+
+                    case "c":
+                        tuples.pointC();
+                        break;
+
+                }
+
+                break;
+
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 
 
     }
+
 }
 
